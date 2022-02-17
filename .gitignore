@@ -1,0 +1,7 @@
+# Maven
+logs/
+target/
+
+# Allure
+.allure
+/bin/

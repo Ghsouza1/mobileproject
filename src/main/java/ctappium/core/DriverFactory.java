@@ -22,23 +22,26 @@ public class DriverFactory {
 	private static void createDriver() throws MalformedURLException {
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		dc.setCapability(MobileCapabilityType.DEVICE_NAME, "AppTeste");
+		//dc.setCapability(MobileCapabilityType.DEVICE_NAME, "AppTeste");
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		dc.setCapability("appPackage", "com.ctappium");
 		dc.setCapability("appActivity", "com.ctappium.MainActivity");
+		dc.setCapability("autoGrantPermissions", true);
+		dc.setCapability("allowTestPackages", true);
+		dc.setCapability("autoAcceptAlerts", true);
+		dc.setCapability("autoDismissAlerts", true);
 		dc.setCapability("chromedriverExecutable",
 				"C:\\Users\\ghsou\\AppData\\Local\\Programs\\appium-desktop\\resources\\app\\node_modules\\appium\\node_modules\\appium-chromedriver\\chromedriver\\win\\chromedriver.exe");
 		dc.setCapability("chromedriverExecutableDir",
 				"C:\\Users\\ghsou\\AppData\\Local\\Programs\\appium-desktop\\resources\\app\\node_modules\\appium\\node_modules\\appium-chromedriver\\chromedriver\\win\\chromedriver.exe");
 		dc.setCapability(MobileCapabilityType.APP,
-				"C:\\Users\\ghsou\\eclipse-workspace\\mobileproject-allure-junit4\\src\\main\\resources\\CTAppium_1_2.apk");
+				"C:\\Users\\ghsou\\OneDrive\\Área de Trabalho\\mobileproject\\src\\main\\resources\\CTAppium_2_0.apk");
 
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), dc);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 

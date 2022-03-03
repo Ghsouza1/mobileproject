@@ -72,7 +72,7 @@ public class BasePage {
 
 	@SuppressWarnings("unlikely-arg-type")
 	public boolean presenceOfElement(String texto) throws MalformedURLException {
-		MobileElement result = getDriver().findElement(By.xpath("//*[@text='" + texto + "']"));
+		MobileElement result = getDriver().findElement(MobileBy.xpath("//android.widget.TextView[@text='" + texto + "']"));
 		return result.equals(texto);
 	}
 
@@ -81,11 +81,11 @@ public class BasePage {
 		return result;
 	}
 
-	public void scrollUp() throws MalformedURLException {
+	public void scrollDown() throws MalformedURLException {
 		scroll(0.1, 0.9);
 	}
 
-	public void scrollDown() throws MalformedURLException {
+	public void scrollUp() throws MalformedURLException {
 		scroll(0.9, 0.1);
 	}
 
@@ -142,11 +142,6 @@ public class BasePage {
 	public void waitElementByXpath(String texto) throws MalformedURLException {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@text='" + texto + "']")));
-	}
-
-	public void waitElementById(String texto) throws MalformedURLException {
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[@id='" + texto + "']")));
 	}
 
 	public void longPress(String texto) throws MalformedURLException {

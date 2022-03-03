@@ -18,15 +18,10 @@ public class OpcaoEscondidaTeste extends BaseTeste {
 	private MenuPage menu = new MenuPage();
 	private OpcaoEscondidaPage page = new OpcaoEscondidaPage();
 
-	@Before
-	public void validarMenuApp() throws MalformedURLException {
-		menu.menuApp();
-	}
-
 	@Test
 	@Description("Iteração Opção Escondida CTAppium")
 	public void deveEncontrarOpcaoEscondida() throws MalformedURLException {
-		menu.scrollDown();
+		menu.scrollUp();
 		menu.acessarOpcaoEscondida();
 		assertTrue(page.getTextAlerta("Sucesso"), true);
 		assertTrue(page.getTextAlerta("Você achou essa opção"), true);

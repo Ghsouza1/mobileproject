@@ -1,7 +1,51 @@
-# Maven
+##############################
+## Java
+##############################
+.mtj.tmp/
+hs_err_pid*
+replay_pid*
+
+##############################
+## Maven
+##############################
 logs/
 target/
 
-# Allure
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.code-workspace
+
+##############################
+## Allure
+##############################
 .allure
 /bin/

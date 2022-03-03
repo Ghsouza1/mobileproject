@@ -22,14 +22,13 @@ public class SwipeListTeste extends BaseTeste {
 
 	@Test
 	@Description("Iteração Swipe List CTAppium")
-	public void fazerSwipeOpcao1() throws MalformedURLException {
+	public void fazerSwipeOpcao() throws MalformedURLException {
 		menu.presenceOfElement("Opção 1");
 		page.swipeElementLeft("Opção 1");
 		page.cliqueBotaoMais();
 		menu.waitElementByXpath("Opção 1 (+)");
 		menu.waitElementByXpath("Opção 1 (+)");
 		page.swipeElementRight("Opção 5 (-)");
-		menu.waitElementByXpath("Opção 5");
 		menu.waitElementByXpath("Opção 5");
 	}
 }

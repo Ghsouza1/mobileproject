@@ -26,10 +26,8 @@ public class SplashTeste extends BaseTeste {
 	@Description("Iteração Splash CTAppium")
 	public void deveAguardarSplashSumir() throws MalformedURLException {
 		page.isTelaSplashVisible();
-
 		page.aguardarSplashSumir();
-
-		assertTrue(menu.presenceOfElement("About..."));
+		menu.waitElementByXpath("About...");
 	}
 
 }

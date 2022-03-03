@@ -58,7 +58,7 @@ public class SeuBarrigaNativoTeste extends BaseTeste {
 		page.cliqueAbaMov();
 		page.btnSalvar();
 		assertTrue(page.getTextElement("Descrição é um campo obrigatório"), true);
-		page.inputDescricao("Nova Movimenta��o");
+		page.inputDescricao("Nova Movimentação");
 		page.btnSalvar();
 		assertTrue(page.getTextElement("Interessado é um campo obrigatório"), true);
 	}

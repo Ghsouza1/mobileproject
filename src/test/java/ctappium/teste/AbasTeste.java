@@ -1,12 +1,9 @@
 package ctappium.teste;
 
 import static org.junit.Assert.assertTrue;
-
 import java.net.MalformedURLException;
-
 import org.junit.Before;
 import org.junit.Test;
-
 import ctappium.core.BaseTeste;
 import ctappium.page.AbasPage;
 import ctappium.page.MenuPage;
@@ -21,7 +18,6 @@ public class AbasTeste extends BaseTeste {
 
 	@Before
 	public void menuAbas() throws MalformedURLException {
-		menu.menuApp();
 		menu.acessarAbas();
 	}
 

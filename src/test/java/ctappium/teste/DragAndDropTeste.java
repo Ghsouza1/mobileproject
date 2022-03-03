@@ -19,7 +19,6 @@ public class DragAndDropTeste extends BaseTeste {
 
 	@Before
 	public void menuDragAndDrop() throws MalformedURLException {
-		menu.menuApp();
 		menu.acessarDragAndDrop();
 	}
 

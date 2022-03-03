@@ -6,11 +6,11 @@ import ctappium.core.BasePage;
 
 public class AbasPage extends BasePage {
 	public void cliqueAba1() throws MalformedURLException {
-		clickByText("ABA 1");
+		clickByText("Aba 1");
 	}
 
 	public void cliqueAba2() throws MalformedURLException {
-		clickByText("ABA 2");
+		clickByText("Aba 2");
 	}
 
 	public String getTextAba(String texto) throws MalformedURLException {

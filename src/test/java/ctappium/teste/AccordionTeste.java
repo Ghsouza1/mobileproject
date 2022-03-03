@@ -19,7 +19,6 @@ public class AccordionTeste extends BaseTeste {
 
 	@Before
 	public void menuAccordion() throws MalformedURLException {
-		menu.menuApp();
 		menu.acessarAccordion();
 	}
 

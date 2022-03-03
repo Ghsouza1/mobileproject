@@ -39,12 +39,12 @@ public class MenuPage extends BasePage {
 	}
 
 	public void acessarSwipeList() throws MalformedURLException {
-		scrollDown();
+		scrollUp();
 		clickByText("Swipe List");
 	}
 
 	public void acessarDragAndDrop() throws MalformedURLException {
-		scrollDown();
+		scrollUp();
 		clickByText("Drag and drop");
 	}
 

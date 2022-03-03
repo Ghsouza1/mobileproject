@@ -1,6 +1,7 @@
 package ctappium.page;
 
 import java.net.MalformedURLException;
+import ctappium.data.DataFaker;
 import org.openqa.selenium.By;
 import ctappium.core.BasePage;
 import ctappium.core.DriverFactory;
@@ -9,8 +10,8 @@ import io.appium.java_client.MobileElement;
 
 public class FormPage extends BasePage {
 
-	public void sendKeysName(String name) throws MalformedURLException {
-		sendKeys(MobileBy.AccessibilityId("nome"), name);
+	public void sendKeysName() throws MalformedURLException {
+		sendKeys(MobileBy.AccessibilityId("nome"), DataFaker.firstName());
 	}
 
 	public void clickDate(String element) throws MalformedURLException {

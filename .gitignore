@@ -5,6 +5,7 @@
 hs_err_pid*
 replay_pid*
 replay_*
+replay_pid
 
 ##############################
 ## Maven

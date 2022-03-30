@@ -1,0 +1,24 @@
+pipeline {
+  agent any
+  tools {
+    maven 'MAVEN'
+    jdk 'JDK'
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'mvn -Dmaven.test.failure.ignore=true install'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'mvn -Dtest=AccordionTeste test'
+      }
+      post {
+        success {
+          junit 'target/surefire-reports/**/*.xml'
+        }
+      }
+    }
+  }
+}

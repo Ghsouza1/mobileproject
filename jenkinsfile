@@ -1,3 +1,4 @@
+/* groovylint-disable-next-line CompileStatic */
 pipeline {
   agent any
   tools {
@@ -15,17 +16,10 @@ pipeline {
         sh 'mvn -Dtest=AccordionTeste test'
       }
       post {
-        success {
-          // publish html
-          publishHTML target: [
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: 'coverage',
-              reportFiles: 'index.html',
-              reportName: 'Mobile Project Report'
-            ]
+        always {
+          junit 'build/reports/**/*.xml'
         }
+      }
     }
   }
 }

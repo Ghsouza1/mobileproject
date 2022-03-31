@@ -16,7 +16,6 @@ pipeline {
       }
       post {
         success {
-          // publish html
           publishHTML target: [
               allowMissing: false,
               alwaysLinkToLastBuild: false,
@@ -26,6 +25,7 @@ pipeline {
               reportName: 'Mobile Project Report'
             ]
         }
+      }
     }
   }
 }

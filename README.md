@@ -16,7 +16,6 @@ Before begin you should download and setup those steps:
 * Install Android Studio
 * Install IDE
 * Android Emulator
-* TESING
 
 ## 🚀 Steps to run locally
 
